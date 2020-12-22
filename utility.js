@@ -41,6 +41,7 @@ class Utility{
         { 
          if(totalHrs <= MAX_MONTHLY_HRS ){
             var daily_wage=wage_per_hour * this.attendance_check(); 
+            console.log("day "+day+" Wage : "+daily_wage);
             monthly_Wage = monthly_Wage + daily_wage;
             totalHrs = totalHrs + this.attendance_check();
          }
