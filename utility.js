@@ -30,10 +30,13 @@ class Utility{
    }
 
    wage_calculation()
-   {
+   {  
+       const work_day_pm=20;
        const wage_per_hour=20;
        let daily_wage=wage_per_hour * this.attendance_check();
-       console.log("wage is "+daily_wage);
+       console.log("daily wage is "+daily_wage);
+       let monthly_wage=work_day_pm * daily_wage;
+       console.log("monthly wage is"+monthly_wage);
    }
 
 
