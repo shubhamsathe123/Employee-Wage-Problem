@@ -40,9 +40,9 @@ class Utility{
         for(var day =0;day <= TOTAL_MONTHLY_DAYS;day ++)
         { 
          if(totalHrs <= MAX_MONTHLY_HRS ){
-            var daily_wage=wage_per_hour * this.attendance_check(); 
-            console.log("day "+day+" Wage : "+daily_wage);
+            var daily_wage=wage_per_hour * this.attendance_check();  
             monthly_Wage = monthly_Wage + daily_wage;
+            console.log("Day:"+day+" | Daily Wage : "+daily_wage+ " | Total Wage : "+monthly_Wage);
             totalHrs = totalHrs + this.attendance_check();
          }
         }
