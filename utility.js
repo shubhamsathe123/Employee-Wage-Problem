@@ -2,24 +2,40 @@ class Utility{
     
    attendance_check()
    {
-    const Half_Day_hr=4;
-    const Full_day_hr=8;
-    const wage_per_hr=20;
-    var empCheck = Math.floor(Math.random() * 2);
-    if(empCheck == 1)
-    {
-     console.log("employee is present");
+    let Half_day_hr=4;
+    let Full_day_hr=8;
+    var availability;
+     var empCheck = Math.floor(Math.random() * 10 % 3);
+     
+     switch(empCheck)
+     {
+       case 0:
+           {
+             availability=0;
+             break;
+           }
+        case 1:
+            {
+                availability=Half_day_hr;
+                break;
+            }
+        default:
+            {
+                availability=Full_day_hr;
+                break;
+            }
 
-    }
-    else
-    {
-        console.log("employee is absent");
-    }
-    var full_day_wage=Full_day_hr * wage_per_hr * empCheck;
-    console.log("full day employee wage is "+full_day_wage);
-    var half_day_wage=Half_Day_hr * wage_per_hr * empCheck;
-    console.log("part time employee wage for the day is "+half_day_wage);
+     }
+    return availability;
    }
-}
 
+   wage_calculation()
+   {
+       const wage_per_hour=20;
+       let daily_wage=wage_per_hour * this.attendance_check();
+       console.log("wage is "+daily_wage);
+   }
+
+
+}
 module.exports=new Utility();
