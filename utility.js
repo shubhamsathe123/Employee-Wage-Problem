@@ -33,12 +33,11 @@ class Utility{
    {  
       const MAX_MONTHLY_HRS = 100;
       const TOTAL_MONTHLY_DAYS = 20;
-       const work_day_pm=20;
        const wage_per_hour=20;
        var day = 0;
        var totalHrs = 0;
        var monthly_Wage=0;
-        for(var day =0;day < TOTAL_MONTHLY_DAYS;day ++)
+        for(var day =0;day <= TOTAL_MONTHLY_DAYS;day ++)
         { 
          if(totalHrs <= MAX_MONTHLY_HRS ){
             var daily_wage=wage_per_hour * this.attendance_check(); 
@@ -47,6 +46,7 @@ class Utility{
          }
         }
         console.log("monthly wage is"+monthly_Wage);
+        console.log("total working hours are:"+totalHrs);
    }
 
 
